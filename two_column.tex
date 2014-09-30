@@ -1,0 +1,186 @@
+\documentclass[twocolumn]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={},
+            pdftitle={},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{0}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\subsubsection{Moose::Meta::Attribute::Native::Trait::Array}\label{moosemetaattributenativetraitarray}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{count}
+\NormalTok{is_empty}
+\NormalTok{elements}
+\NormalTok{get(}\DataTypeTok{$index}\NormalTok{)}
+\FunctionTok{pop}
+\FunctionTok{push}\NormalTok{(}\DataTypeTok{$value1}\NormalTok{, }\DataTypeTok{$value2}\NormalTok{, value3 ...)}
+\FunctionTok{shift}
+\FunctionTok{unshift}\NormalTok{(}\DataTypeTok{$value1}\NormalTok{, }\DataTypeTok{$value2}\NormalTok{, value3 ...)}
+\FunctionTok{splice}\NormalTok{(}\DataTypeTok{$offset}\NormalTok{, }\DataTypeTok{$length}\NormalTok{, }\DataTypeTok{@values}\NormalTok{)}
+\NormalTok{first( }\KeywordTok{sub }\NormalTok{\{ ... \} )}
+\NormalTok{first_index( }\KeywordTok{sub }\NormalTok{\{ ... \} )}
+\FunctionTok{grep}\NormalTok{( }\KeywordTok{sub }\NormalTok{\{ ... \} )}
+\FunctionTok{map}\NormalTok{( }\KeywordTok{sub }\NormalTok{\{ ... \} )}
+\NormalTok{reduce( }\KeywordTok{sub }\NormalTok{\{ ... \} )}
+\FunctionTok{sort}
+\FunctionTok{sort}\NormalTok{( }\KeywordTok{sub }\NormalTok{\{ ... \} )}
+\NormalTok{sort_in_place}
+\NormalTok{sort_in_place( }\KeywordTok{sub }\NormalTok{\{ ... \} )}
+\NormalTok{shuffle}
+\NormalTok{uniq}
+\FunctionTok{join}\NormalTok{(}\DataTypeTok{$str}\NormalTok{)}
+\NormalTok{set(}\DataTypeTok{$index}\NormalTok{, }\DataTypeTok{$value}\NormalTok{)}
+\FunctionTok{delete}\NormalTok{(}\DataTypeTok{$index}\NormalTok{)}
+\NormalTok{insert(}\DataTypeTok{$index}\NormalTok{, }\DataTypeTok{$value}\NormalTok{)}
+\NormalTok{clear}
+\NormalTok{accessor(}\DataTypeTok{$index}\NormalTok{)}
+\NormalTok{accessor(}\DataTypeTok{$index}\NormalTok{, }\DataTypeTok{$value}\NormalTok{)}
+\NormalTok{natatime(}\DataTypeTok{$n}\NormalTok{)}
+\NormalTok{natatime(}\DataTypeTok{$n}\NormalTok{, }\DataTypeTok{$code}\NormalTok{)}
+\NormalTok{shallow_clone}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Moose::Meta::Attribute::Native::Trait::Hash}\label{moosemetaattributenativetraithash}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{get(}\DataTypeTok{$key}\NormalTok{, }\DataTypeTok{$key2}\NormalTok{, }\DataTypeTok{$key3}\NormalTok{...)}
+\NormalTok{set(}\DataTypeTok{$key} \NormalTok{=> }\DataTypeTok{$value}\NormalTok{, }\DataTypeTok{$key2} \NormalTok{=> }\DataTypeTok{$value2}\NormalTok{...)}
+\FunctionTok{delete}\NormalTok{(}\DataTypeTok{$key}\NormalTok{, }\DataTypeTok{$key2}\NormalTok{, }\DataTypeTok{$key3}\NormalTok{...)}
+\FunctionTok{keys}
+\FunctionTok{exists}\NormalTok{(}\DataTypeTok{$key}\NormalTok{)}
+\FunctionTok{defined}\NormalTok{(}\DataTypeTok{$key}\NormalTok{)}
+\FunctionTok{values}
+\NormalTok{kv}
+\NormalTok{elements}
+\NormalTok{clear}
+\NormalTok{count}
+\NormalTok{is_empty}
+\NormalTok{accessor(}\DataTypeTok{$key}\NormalTok{)}
+\NormalTok{accessor(}\DataTypeTok{$key}\NormalTok{, }\DataTypeTok{$value}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Moose::Meta::Attribute::Native::Trait::Code}\label{moosemetaattributenativetraitcode}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{execute(}\DataTypeTok{@args}\NormalTok{)}
+\CommentTok{# Calls the coderef with the given args.}
+\NormalTok{execute_method(}\DataTypeTok{@args}\NormalTok{)}
+\CommentTok{# Calls the coderef with the instance }
+\CommentTok{# as invocant and given args.}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Moose::Meta::Attribute::Native::Trait::String}\label{moosemetaattributenativetraitstring}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{inc}
+\NormalTok{append(}\DataTypeTok{$string}\NormalTok{)}
+\NormalTok{prepend(}\DataTypeTok{$string}\NormalTok{)}
+\NormalTok{replace(}\DataTypeTok{$pattern}\NormalTok{, }\DataTypeTok{$replacement}\NormalTok{)}
+\NormalTok{match(}\DataTypeTok{$pattern}\NormalTok{)}
+\FunctionTok{chop}
+\FunctionTok{chomp}
+\NormalTok{clear}
+\FunctionTok{length}
+\FunctionTok{substr}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Moose::Meta::Attribute::Native::Trait::Bool}\label{moosemetaattributenativetraitbool}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{set, unset, toogle, }\KeywordTok{not}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Moose::Meta::Attribute::Native::Trait::Number}\label{moosemetaattributenativetraitnumber}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{set, add, }\KeywordTok{sub}\NormalTok{, mul, div, mod, }\FunctionTok{abs}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Moose::Meta::Attribute::Native::Trait::Counter}\label{moosemetaattributenativetraitcounter}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{set(}\DataTypeTok{$value}\NormalTok{)}
+\NormalTok{inc(}\DataTypeTok{$arg}\NormalTok{)}
+\NormalTok{dec}
+\NormalTok{dec(}\DataTypeTok{$arg}\NormalTok{)}
+\FunctionTok{reset}
+\end{Highlighting}
+\end{Shaded}
+
+\end{document}

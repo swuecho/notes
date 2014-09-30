@@ -31,7 +31,6 @@ natatime($n)
 natatime($n, $code)
 shallow_clone
 ```
-
 ### Moose::Meta::Attribute::Native::Trait::Hash
 
 ```perl
@@ -50,14 +49,18 @@ is_empty
 accessor($key)
 accessor($key, $value)
 ```
-Moose::Meta::Attribute::Native::Trait::Code 
+### Moose::Meta::Attribute::Native::Trait::Code 
+
 ```perl
 execute(@args)
 # Calls the coderef with the given args.
 execute_method(@args)
-# Calls the coderef with the instance as invocant and given args.
+# Calls the coderef with the instance 
+# as invocant and given args.
 ```
+
 ###  Moose::Meta::Attribute::Native::Trait::String
+
 ```perl
 inc
 append($string)
@@ -70,5 +73,25 @@ clear
 length
 substr
 ```
+###  Moose::Meta::Attribute::Native::Trait::Bool
+
+```perl
+set, unset, toogle, not
+```
+### Moose::Meta::Attribute::Native::Trait::Number 
+
+```perl
+set, add, sub, mul, div, mod, abs
+```
+### Moose::Meta::Attribute::Native::Trait::Counter
+
+```perl
+set($value)
+inc($arg)
+dec
+dec($arg)
+reset
+```
+
 
 
